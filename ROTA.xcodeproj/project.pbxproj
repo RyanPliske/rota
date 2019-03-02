@@ -13,6 +13,17 @@
 		F91DE910222A3D8400A24856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91DE90F222A3D8400A24856 /* Assets.xcassets */; };
 		F91DE913222A3D8400A24856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91DE911222A3D8400A24856 /* LaunchScreen.storyboard */; };
 		F91DE91B222A412000A24856 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91DE91A222A412000A24856 /* LocationManager.swift */; };
+		F91DE928222A550C00A24856 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE91D222A550B00A24856 /* FirebaseCore.framework */; };
+		F91DE929222A550C00A24856 /* FirebaseABTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE91E222A550B00A24856 /* FirebaseABTesting.framework */; };
+		F91DE92A222A550C00A24856 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE91F222A550B00A24856 /* FirebaseMessaging.framework */; };
+		F91DE92B222A550C00A24856 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE920222A550B00A24856 /* FirebaseInstanceID.framework */; };
+		F91DE92C222A550C00A24856 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE921222A550B00A24856 /* FirebaseAnalytics.framework */; };
+		F91DE92D222A550C00A24856 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE922222A550B00A24856 /* FIRAnalyticsConnector.framework */; };
+		F91DE92E222A550C00A24856 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE923222A550B00A24856 /* FirebaseCoreDiagnostics.framework */; };
+		F91DE92F222A550C00A24856 /* FirebasePerformance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE924222A550B00A24856 /* FirebasePerformance.framework */; };
+		F91DE930222A550C00A24856 /* FirebaseRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE925222A550B00A24856 /* FirebaseRemoteConfig.framework */; };
+		F91DE931222A550C00A24856 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE926222A550B00A24856 /* GoogleAppMeasurement.framework */; };
+		F91DE932222A550C00A24856 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91DE927222A550B00A24856 /* GoogleToolboxForMac.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		F91DE912222A3D8400A24856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F91DE914222A3D8400A24856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F91DE91A222A412000A24856 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F91DE91D222A550B00A24856 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Carthage/Build/iOS/FirebaseCore.framework; sourceTree = "<group>"; };
+		F91DE91E222A550B00A24856 /* FirebaseABTesting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseABTesting.framework; path = Carthage/Build/iOS/FirebaseABTesting.framework; sourceTree = "<group>"; };
+		F91DE91F222A550B00A24856 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseMessaging.framework; path = Carthage/Build/iOS/FirebaseMessaging.framework; sourceTree = "<group>"; };
+		F91DE920222A550B00A24856 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		F91DE921222A550B00A24856 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Carthage/Build/iOS/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		F91DE922222A550B00A24856 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FIRAnalyticsConnector.framework; path = Carthage/Build/iOS/FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		F91DE923222A550B00A24856 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Carthage/Build/iOS/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		F91DE924222A550B00A24856 /* FirebasePerformance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebasePerformance.framework; path = Carthage/Build/iOS/FirebasePerformance.framework; sourceTree = "<group>"; };
+		F91DE925222A550B00A24856 /* FirebaseRemoteConfig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseRemoteConfig.framework; path = Carthage/Build/iOS/FirebaseRemoteConfig.framework; sourceTree = "<group>"; };
+		F91DE926222A550B00A24856 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Carthage/Build/iOS/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		F91DE927222A550B00A24856 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = Carthage/Build/iOS/GoogleToolboxForMac.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91DE928222A550C00A24856 /* FirebaseCore.framework in Frameworks */,
+				F91DE929222A550C00A24856 /* FirebaseABTesting.framework in Frameworks */,
+				F91DE92A222A550C00A24856 /* FirebaseMessaging.framework in Frameworks */,
+				F91DE92B222A550C00A24856 /* FirebaseInstanceID.framework in Frameworks */,
+				F91DE92C222A550C00A24856 /* FirebaseAnalytics.framework in Frameworks */,
+				F91DE92D222A550C00A24856 /* FIRAnalyticsConnector.framework in Frameworks */,
+				F91DE92E222A550C00A24856 /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				F91DE92F222A550C00A24856 /* FirebasePerformance.framework in Frameworks */,
+				F91DE930222A550C00A24856 /* FirebaseRemoteConfig.framework in Frameworks */,
+				F91DE931222A550C00A24856 /* GoogleAppMeasurement.framework in Frameworks */,
+				F91DE932222A550C00A24856 /* GoogleToolboxForMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +75,7 @@
 			children = (
 				F91DE907222A3D8400A24856 /* ROTA */,
 				F91DE906222A3D8400A24856 /* Products */,
+				F91DE91C222A550B00A24856 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +101,24 @@
 			path = ROTA;
 			sourceTree = "<group>";
 		};
+		F91DE91C222A550B00A24856 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F91DE922222A550B00A24856 /* FIRAnalyticsConnector.framework */,
+				F91DE91E222A550B00A24856 /* FirebaseABTesting.framework */,
+				F91DE921222A550B00A24856 /* FirebaseAnalytics.framework */,
+				F91DE91D222A550B00A24856 /* FirebaseCore.framework */,
+				F91DE923222A550B00A24856 /* FirebaseCoreDiagnostics.framework */,
+				F91DE920222A550B00A24856 /* FirebaseInstanceID.framework */,
+				F91DE91F222A550B00A24856 /* FirebaseMessaging.framework */,
+				F91DE924222A550B00A24856 /* FirebasePerformance.framework */,
+				F91DE925222A550B00A24856 /* FirebaseRemoteConfig.framework */,
+				F91DE926222A550B00A24856 /* GoogleAppMeasurement.framework */,
+				F91DE927222A550B00A24856 /* GoogleToolboxForMac.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +129,7 @@
 				F91DE901222A3D8400A24856 /* Sources */,
 				F91DE902222A3D8400A24856 /* Frameworks */,
 				F91DE903222A3D8400A24856 /* Resources */,
+				F91DE933222A555600A24856 /* Run Script - GoogleServices-Info Setup */,
 			);
 			buildRules = (
 			);
@@ -137,6 +190,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F91DE933222A555600A24856 /* Run Script - GoogleServices-Info Setup */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - GoogleServices-Info Setup";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "GOOGLESERVICE_INFO_NAME=GoogleService-Info\n\nGOOGLESERVICE_INFO_LOCAL=${PROJECT_DIR}/${TARGET_NAME}/${GOOGLESERVICE_INFO_NAME}-Local.plist\n\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\n\necho \"Using ${GOOGLESERVICE_INFO_LOCAL}\"\ncp \"${GOOGLESERVICE_INFO_LOCAL}\" \"${PLIST_DESTINATION}/${GOOGLESERVICE_INFO_NAME}.plist\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F91DE901222A3D8400A24856 /* Sources */ = {
@@ -293,6 +367,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 557EJSX593;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ROTA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,6 +389,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 557EJSX593;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ROTA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
