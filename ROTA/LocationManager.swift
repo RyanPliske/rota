@@ -4,6 +4,24 @@ import Firebase
 
 typealias JSON = [String: Any]
 
+struct User {
+    let userId: UUID
+    var location: Location?
+    
+    init(userId: UUID, _ json: JSON) {
+        
+        var location: Location? {
+            guard let longitude = json["longitude"] as? Double,
+                let latitude = json["latitude"] as? Double else { return nil }
+            return Location(longitude: longitude, latitude: latitude)
+        }
+
+        self.location = location
+        self.userId = userId
+    }
+    
+}
+
 struct Location {
     let longitude: Double
     let latitude: Double
@@ -21,11 +39,9 @@ protocol LocationManagerUpdateListener: class {
 }
 
 final class LocationManager: NSObject {
+    var lastLocation: Location?
     private var mapListeners = NSMapTable<NSString, AnyObject>.strongToWeakObjects()
     private let manager: CLLocationManager
-    
-    private let collection = Firestore.firestore().collection("users")
-    private var document: DocumentReference { return collection.document("tplisk") }
     
     init(manager: CLLocationManager) {
         self.manager = manager
@@ -66,22 +82,13 @@ extension LocationManager: CLLocationManagerDelegate {
         
         let location = Location(longitude: _location.coordinate.longitude, latitude: _location.coordinate.latitude)
         
-        document.setData(location.json)
+        lastLocation = location
         
-//        collection.getDocuments { (querySnapshot, error) in
-//            if let error = error {
-//                print("Could not locate document due to error: \(error)")
-//                return
-//            }
-//            guard let documents = querySnapshot?.documents else {
-//                print("could not locate documents")
-//                return
-//            }
-//            documents.first?.data()
-//        }
-        
-//        collection.addDocument(data: ["tplisk": location.json])
-        
+        document.setData(location.json) { (error) in
+            if let error = error {
+                print((error as NSError).debugDescription)
+            }
+        }
         locationManagerUpdateListeners.forEach({ $0.locationUpdated(location) })
     }
     

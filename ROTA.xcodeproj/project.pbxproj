@@ -34,6 +34,7 @@
 		F9EEDC36224EA3E400CAA040 /* leveldb-library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9EEDC28224E9C1900CAA040 /* leveldb-library.framework */; };
 		F9EEDC40224EA97B00CAA040 /* BoringSSL-GRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9EEDC3F224EA97B00CAA040 /* BoringSSL-GRPC.framework */; };
 		F9EEDC42224EB07500CAA040 /* gRPCCertificates.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F9EEDC41224EB07500CAA040 /* gRPCCertificates.bundle */; };
+		F9EEDC44224EB28300CAA040 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9EEDC43224EB28300CAA040 /* MapKit.framework */; };
 		F9FA9404224E6D3500439785 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FA9403224E6D3500439785 /* GoogleUtilities.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		F9EEDC3C224EA85C00CAA040 /* gRPC-ProtoRPC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "gRPC-ProtoRPC.framework"; path = "Carthage/Build/iOS/gRPC-ProtoRPC.framework"; sourceTree = "<group>"; };
 		F9EEDC3F224EA97B00CAA040 /* BoringSSL-GRPC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "BoringSSL-GRPC.framework"; path = "Carthage/Build/iOS/BoringSSL-GRPC.framework"; sourceTree = "<group>"; };
 		F9EEDC41224EB07500CAA040 /* gRPCCertificates.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = gRPCCertificates.bundle; path = Carthage/Build/iOS/FirebaseFirestore.framework/gRPCCertificates.bundle; sourceTree = "<group>"; };
+		F9EEDC43224EB28300CAA040 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F9FA9403224E6D3500439785 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Carthage/Build/iOS/GoogleUtilities.framework; sourceTree = "<group>"; };
 		F9FA9409224E78A000439785 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		F9FA940A224E78A000439785 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = SOURCE_ROOT; };
@@ -85,6 +87,7 @@
 				F91DE929222A550C00A24856 /* FirebaseABTesting.framework in Frameworks */,
 				F91DE92A222A550C00A24856 /* FirebaseMessaging.framework in Frameworks */,
 				F91DE931222A550C00A24856 /* GoogleAppMeasurement.framework in Frameworks */,
+				F9EEDC44224EB28300CAA040 /* MapKit.framework in Frameworks */,
 				F91DE92C222A550C00A24856 /* FirebaseAnalytics.framework in Frameworks */,
 				F9EEDC22224E9A7300CAA040 /* nanopb.framework in Frameworks */,
 				F9FA9404224E6D3500439785 /* GoogleUtilities.framework in Frameworks */,
@@ -144,6 +147,7 @@
 		F91DE91C222A550B00A24856 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9EEDC43224EB28300CAA040 /* MapKit.framework */,
 				F9EEDC41224EB07500CAA040 /* gRPCCertificates.bundle */,
 				F9EEDC3F224EA97B00CAA040 /* BoringSSL-GRPC.framework */,
 				F9EEDC3C224EA85C00CAA040 /* gRPC-ProtoRPC.framework */,
@@ -208,6 +212,9 @@
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
 						};
