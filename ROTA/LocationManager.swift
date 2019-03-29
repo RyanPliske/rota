@@ -1,9 +1,19 @@
 import Foundation
 import CoreLocation
+import Firebase
+
+typealias JSON = [String: Any]
 
 struct Location {
     let longitude: Double
     let latitude: Double
+    
+    var json: JSON {
+        return [
+            "longitude": longitude,
+            "latitude": latitude
+        ]
+    }
 }
 
 protocol LocationManagerUpdateListener: class {
@@ -13,6 +23,9 @@ protocol LocationManagerUpdateListener: class {
 final class LocationManager: NSObject {
     private var mapListeners = NSMapTable<NSString, AnyObject>.strongToWeakObjects()
     private let manager: CLLocationManager
+    
+    private let collection = Firestore.firestore().collection("users")
+    private var document: DocumentReference { return collection.document("tplisk") }
     
     init(manager: CLLocationManager) {
         self.manager = manager
@@ -49,9 +62,27 @@ final class LocationManager: NSObject {
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
+        guard let _location = locations.last else { return }
         
-        locationManagerUpdateListeners.forEach({ $0.locationUpdated(Location.init(longitude: location.coordinate.longitude, latitude: location.coordinate.latitude)) })
+        let location = Location(longitude: _location.coordinate.longitude, latitude: _location.coordinate.latitude)
+        
+        document.setData(location.json)
+        
+//        collection.getDocuments { (querySnapshot, error) in
+//            if let error = error {
+//                print("Could not locate document due to error: \(error)")
+//                return
+//            }
+//            guard let documents = querySnapshot?.documents else {
+//                print("could not locate documents")
+//                return
+//            }
+//            documents.first?.data()
+//        }
+        
+//        collection.addDocument(data: ["tplisk": location.json])
+        
+        locationManagerUpdateListeners.forEach({ $0.locationUpdated(location) })
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
